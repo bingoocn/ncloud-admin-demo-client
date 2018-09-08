@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(name = "demo-service-b")
 public interface DemoClient {
 
-    @GetMapping("/b/users/{id}")
+    @GetMapping("/api/users/{id}")
     User getUser(@PathVariable("id") String id);
 
-    @PostMapping("/b/users")
+    @PostMapping("/api/users")
     User addUser(User user);
 }
